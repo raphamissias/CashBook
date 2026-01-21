@@ -1,0 +1,4 @@
+package IEADP.CashBook.dto;
+
+public record ResponseDTO(String name, String token) {
+}
