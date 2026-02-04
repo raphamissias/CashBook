@@ -1,0 +1,27 @@
+<main>
+  <div class="form-wrap">
+    <form [formGroup]="purposesForm">
+      <app-primary-input formControlName="name" label="Nome" />
+      <app-primary-input formControlName="isActive" label="Propósito ativo?" type="checkbox" />
+    </form>
+    <button (click)="submit()">Salvar propósito</button>
+  </div>
+  <div class="dtg">
+    <div class="dtg-header">
+      <span class="column-1">Nome</span>
+      <span class="column-2">Telefone</span>
+      <span class="column-3">Está ativo?</span>
+      <span><button (click)="refreshPurposes()">Refresh</button></span>
+    </div>
+    <ul class="dtg-items">
+      @for (purpose of purposes; track purpose.id) {
+        <li class="dtg-item">
+          <div class="column-1">{{ purpose.name }}</div>
+          <div class="column-3">{{ purpose.isActive }}</div>
+        </li>
+      } @empty {
+        <li class="dtg-item">No purposes found.</li>
+      }
+    </ul>
+  </div>
+</main>

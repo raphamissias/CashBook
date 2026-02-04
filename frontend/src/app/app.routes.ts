@@ -3,6 +3,7 @@ import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
 import { Home } from './pages/home/home';
 import { Contributors } from './pages/contributors/contributors';
+import { Purposes } from './pages/purposes/purposes';
 
 export const routes: Routes = [
   {
@@ -20,5 +21,9 @@ export const routes: Routes = [
   {
     path: 'contributors',
     component: Contributors,
+  },
+  {
+    path: 'purposes',
+    component: Purposes,
   },
 ];

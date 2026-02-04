@@ -1,15 +1,30 @@
 <main>
-  <form action="">
+  <form [formGroup]="entryForm">
     <div class="flex">
-      <app-primary-input type="text" label="Contribuinte" />
-      <app-primary-input type="text" label="Propósito" />
+      <app-primary-input
+        formControlName="contributorId"
+        inputName="contributorId"
+        type="text"
+        label="Contribuinte"
+      />
+      <app-primary-input
+        formControlName="purposeId"
+        inputName="purposeId"
+        type="text"
+        label="Propósito"
+      />
     </div>
     <div class="flex">
-      <app-primary-input type="text" label="Soma" />
+      <app-primary-input formControlName="sumValue" inputName="sumValue" type="text" label="Soma" />
       <button>+</button>
     </div>
-    <app-primary-input type="text" label="Total" />
-    <app-primary-input type="text" label="Data" />
-    <button class="primary-btn">Adicionar entrada</button>
+    <app-primary-input
+      formControlName="totalValue"
+      inputName="totalValue"
+      type="text"
+      label="Total"
+    />
+    <app-primary-input formControlName="date" inputName="date" type="text" label="Data" />
+    <button (click)="submit()" class="primary-btn">Adicionar entrada</button>
   </form>
 </main>
