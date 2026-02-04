@@ -1,0 +1,18 @@
+<main>
+  <div class="form-wrap">
+    <form [formGroup]="contributorsForm">
+      <app-primary-input formControlName="name" label="Nome" />
+      <app-primary-input formControlName="phone" label="Telefone" />
+      <app-primary-input formControlName="isActive" label="Contribuinte ativo?" type="checkbox" />
+    </form>
+    <button (click)="submit()">Salvar contribuinte</button>
+  </div>
+  <ul class="dtg">
+    <li class="dtg-header">
+      <span class="column-1">Nome</span>
+      <span class="column-2">Telefone</span>
+      <span class="column-3">Está ativo?</span>
+      <span><button (click)="refreshContributors()">Refresh</button></span>
+    </li>
+  </ul>
+</main>

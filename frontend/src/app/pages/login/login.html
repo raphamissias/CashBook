@@ -1,0 +1,22 @@
+<app-default-login-layout
+  subtitle="Não tem conta?"
+  primaryBtnText="Entrar"
+  secondaryBtnText="Cadastre-se"
+  (submit)="submit()"
+  (navigate)="navigate()"
+>
+  <form [formGroup]="loginForm">
+    <app-primary-input
+      formControlName="email"
+      inputName="email"
+      label="E-mail"
+      type="text"
+    ></app-primary-input>
+    <app-primary-input
+      formControlName="password"
+      inputName="password"
+      label="Senha"
+      type="password"
+    ></app-primary-input>
+  </form>
+</app-default-login-layout>

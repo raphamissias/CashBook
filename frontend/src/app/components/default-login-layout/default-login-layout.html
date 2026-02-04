@@ -1,0 +1,23 @@
+<main>
+  <section class="primary-section">
+    <div>
+      <div class="title">
+        <h3>Controle Financeiro</h3>
+      </div>
+      <div class="form-wrapper">
+        <ng-content></ng-content>
+        <div class="button-wrapper">
+          <button class="primary-btn" (click)="submit()">{{ primaryBtnText }}</button>
+          <label for="">{{ subtitle }}</label>
+          <button (click)="navigate()">{{ secondaryBtnText }}</button>
+        </div>
+      </div>
+      <div class="quote-wrapper">
+        <cite>
+          "Aquele que tem os meus mandamentos <br />
+          e os guarda, esse é o que me ama." João 14:21
+        </cite>
+      </div>
+    </div>
+  </section>
+</main>

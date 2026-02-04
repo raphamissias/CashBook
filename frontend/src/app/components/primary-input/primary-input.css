@@ -1,0 +1,31 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10px;
+  gap: 4px;
+  color: var(--color-grey-600);
+}
+
+.input-wrapper input {
+  padding: 0.5rem;
+
+  background: #12100F;
+  border: 1px solid #2A2421;
+  border-radius: 0.7rem;
+
+  color: #EDEAE8;
+}
+
+.input-wrapper input:focus {
+  border-color: #34261F;
+  box-shadow: 0 0 0 1px #34261F;
+}
+
+.input-wrapper label {
+  font-size: 12px;
+}
+
+.input-chk {
+  flex-direction: row;
+}

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import './styles/button.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-brand-100: #34261F;
+  --color-brand-200: #2A2421;
+  --color-brand-300: #4A3B34;
+  --color-brand-400: #1A1715;
+  --color-grey-100: #212529;
+  --color-grey-200: #495057;
+  --color-grey-300: #adb5bd;
+  --color-grey-400: #e1e7ea;
+  --color-grey-500: #f1f3f5;
+  --color-grey-600: #f4f6f7;
+  --color-grey-700: #ffffff;
+  --color-feedback-alert: #c92a2a;
+  --color-feedback-success: #12ab7d;
+  --color-feedback-warning: #d08c00;
+  --color-feedback-disable: #c6c7cd;
+  --font-size-1: 1rem;
+  --font-size-2: 0.875rem;
+  --font-size-3: 0.75rem;
+  --font-title-1: 32px;
+}
+
+fieldset {
+  border: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--color-grey-600);
+  background: var(--color-brand-400);
+}
