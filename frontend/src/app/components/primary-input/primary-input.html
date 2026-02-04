@@ -1,4 +1,10 @@
-<div class="input-wrapper">
+<div class="input-wrapper" [class.input-chk]="type === 'checkbox'">
   <label [for]="inputName">{{ label }}</label>
-  <input [type]="type" [placeholder]="placeholder" [value]="value" (input)="onInput($event)" />
+  <input
+    [type]="type"
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="onInput($event)"
+    [checked]="isChecked"
+  />
 </div>

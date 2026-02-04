@@ -9,6 +9,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+app-root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 :root {
   --color-brand-100: #34261F;
   --color-brand-200: #2A2421;

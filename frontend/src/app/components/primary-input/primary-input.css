@@ -29,3 +29,8 @@
 .input-chk {
   flex-direction: row;
 }
+
+.input-wrapper.input-chk {
+  flex-direction: row;
+  gap: 1rem;
+}

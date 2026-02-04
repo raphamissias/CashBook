@@ -24,7 +24,7 @@ export class PrimaryInput implements ControlValueAccessor {
   @Input() placeholder: string = '';
 
   value: string = '';
-  isChecked: boolean = false;
+  isChecked: boolean = true;
   onChange: any = () => {};
   onTouched: any = () => {};
 

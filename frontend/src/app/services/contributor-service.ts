@@ -10,10 +10,10 @@ export class ContributorService {
 
   constructor(private httpClient: HttpClient) {}
 
-  post(name: string, phone: string, isActive: boolean) {
+  post(name: string, phoneNumber: string, isActive: boolean) {
     return this.httpClient.post<ContributorPostResponse>(
       this.apiUrl,
-      { name, phone, isActive },
+      { name, phoneNumber, isActive },
       {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
