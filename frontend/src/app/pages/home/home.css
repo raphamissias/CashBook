@@ -1,6 +1,57 @@
 main {
   min-height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-select {
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid #2A2421;
+  background-color: #12100F;
+}
+
+.btn-select span {
+  width: 100%;
+  font-size: 12px;
+}
+
+.select-content {
+  margin-top: 3rem;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.select-content input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #2A2421;
+}
+
+.option li {
+  text-overflow: ellipsis;
+}
+
+.option li:hover {
+  background-color: var(--color-grey-500);
 }

@@ -22,6 +22,7 @@ export class PrimaryInput implements ControlValueAccessor {
   @Input() inputName: string = '';
   @Input() label: string = '';
   @Input() placeholder: string = '';
+  @Input() list: string = '';
 
   value: string = '';
   isChecked: boolean = true;

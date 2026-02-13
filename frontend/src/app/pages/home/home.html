@@ -1,20 +1,41 @@
 <main>
-  <form [formGroup]="entryForm">
+  <div>
+    <button>Tela inicial</button>
+    <button>Contribuintes</button>
+    <button>Propósitos</button>
+  </div>
+  <form [formGroup]="entryForm" class="entry-form">
     <div class="flex">
       <app-primary-input
         formControlName="contributorId"
         inputName="contributorId"
         type="text"
         label="Contribuinte"
+        list="contributors-list"
       />
+      <datalist name="" id="contributors-list">
+        @for (contributor of contributorsList; track contributor.id) {
+          <option>{{ contributor.name }}</option>
+        } @empty {
+          <option value="Lista vazia">Lista vazia</option>
+        }
+      </datalist>
       <app-primary-input
         formControlName="purposeId"
         inputName="purposeId"
         type="text"
         label="Propósito"
+        list="purposes-list"
       />
+      <datalist name="" id="purposes-list">
+        @for (purpose of purposesList; track purpose.id) {
+          <option>{{ purpose.name }}</option>
+        } @empty {
+          <option value="Lista vazia"></option>
+        }
+      </datalist>
     </div>
-    <div class="flex">
+    <div>
       <app-primary-input formControlName="sumValue" inputName="sumValue" type="text" label="Soma" />
       <button>+</button>
     </div>
