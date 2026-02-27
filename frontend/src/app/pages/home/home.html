@@ -1,8 +1,8 @@
 <main>
-  <div>
-    <button>Tela inicial</button>
-    <button>Contribuintes</button>
-    <button>Propósitos</button>
+  <div class="buttons-wrap">
+    <button class="primary-btn">Tela inicial</button>
+    <button class="primary-btn">Contribuintes</button>
+    <button class="primary-btn">Propósitos</button>
   </div>
   <form [formGroup]="entryForm" class="entry-form">
     <div class="flex">
@@ -35,9 +35,9 @@
         }
       </datalist>
     </div>
-    <div>
+    <div class="flex">
       <app-primary-input formControlName="sumValue" inputName="sumValue" type="text" label="Soma" />
-      <button>+</button>
+      <button class="primary-btn">+</button>
     </div>
     <app-primary-input
       formControlName="totalValue"
