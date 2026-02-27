@@ -5,17 +5,17 @@
       <app-primary-input formControlName="phoneNumber" label="Telefone" />
       <app-primary-input formControlName="isActive" label="Contribuinte ativo?" type="checkbox" />
     </form>
-    <button (click)="submit()">Salvar contribuinte</button>
+    <button class="primary-btn" (click)="submit()">Salvar contribuinte</button>
   </div>
   <div class="dtg">
     <div class="dtg-header">
       <span class="column-1">Nome</span>
       <span class="column-2">Telefone</span>
       <span class="column-3">Está ativo?</span>
-      <span><button (click)="refreshContributors()">Refresh</button></span>
+      <span><button (click)="listContributors()">Refresh</button></span>
     </div>
     <ul class="dtg-items">
-      @for (contributor of contributors; track contributor.id) {
+      @for (contributor of contributorsList; track contributor.id) {
         <li class="dtg-item">
           <div class="column-1">{{ contributor.name }}</div>
           <div class="column-2">{{ contributor.phoneNumber }}</div>

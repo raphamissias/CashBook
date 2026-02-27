@@ -1,9 +1,15 @@
 main {
   min-height: 100dvh;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.buttons-wrap {
+  display: flex;
+  gap: 1rem;
 }
 
 .flex {

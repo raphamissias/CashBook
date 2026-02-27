@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Contributors {
   contributorsForm!: FormGroup;
-  contributors: ContributorGetResponse[] = [];
+  contributorsList: ContributorGetResponse[] | null = null;
 
   constructor(private contributorService: ContributorService) {
     this.contributorsForm = new FormGroup({
@@ -33,13 +33,17 @@ export class Contributors {
     });
   }
 
-  refreshContributors() {
+  listContributors() {
     this.contributorService.get().subscribe({
       next: (res) => {
-        this.contributors = [...res];
-        console.log(this.contributors);
+        if (res.status === 200) this.contributorsList = res.body;
+        console.log(this.contributorsList);
       },
       error: (err) => console.log(err),
     });
+  }
+
+  ngOnInit(): void {
+    this.listContributors();
   }
 }
