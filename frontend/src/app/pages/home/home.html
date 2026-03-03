@@ -48,4 +48,14 @@
     <app-primary-input formControlName="date" inputName="date" type="text" label="Data" />
     <button (click)="submit()" class="primary-btn">Adicionar entrada</button>
   </form>
+  <app-data-grid-view
+    class="dtg-section"
+    [columnOneName]="'Nome'"
+    [columnTwoName]="'Propósito'"
+    [columnThreeName]="'Data'"
+    [columnOneDataName]="'name'"
+    [columnTwoDataName]="'purpose'"
+    [columnThreeDataName]="'date'"
+    [dataResponse]="entriesList"
+  ></app-data-grid-view>
 </main>

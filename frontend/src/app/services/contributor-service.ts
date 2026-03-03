@@ -29,6 +29,7 @@ export class ContributorService {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${sessionStorage.getItem('auth-token')}`,
       }),
+      observe: 'response',
     });
   }
 }

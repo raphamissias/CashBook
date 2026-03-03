@@ -25,10 +25,11 @@ export class PurposeService {
 
   get() {
     return this.httpClient.get<PurposeGetResponse[]>(this.apiUrl, {
-      headers: {
+      headers: new HttpHeaders({
         'Content-Type': 'application/json',
         Authorization: `Bearer ${sessionStorage.getItem('auth-token')}`,
-      },
+      }),
+      observe: 'response',
     });
   }
 }

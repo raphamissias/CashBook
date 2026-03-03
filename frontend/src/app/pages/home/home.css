@@ -61,3 +61,7 @@ button {
 .option li:hover {
   background-color: var(--color-grey-500);
 }
+
+.dtg-section {
+  width: 100%;
+}
