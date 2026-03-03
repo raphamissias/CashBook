@@ -4,11 +4,12 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ContributorService } from '../../services/contributor-service';
 import { ContributorGetResponse } from '../../types/contributorResponse';
 import { CommonModule } from '@angular/common';
+import { DataGridView } from '../../components/data-grid-view/data-grid-view';
 
 @Component({
   selector: 'app-contributors',
   standalone: true,
-  imports: [CommonModule, PrimaryInput, ReactiveFormsModule],
+  imports: [CommonModule, PrimaryInput, ReactiveFormsModule, DataGridView],
   templateUrl: './contributors.html',
   styleUrl: './contributors.css',
 })
@@ -38,12 +39,17 @@ export class Contributors {
       next: (res) => {
         if (res.status === 200) this.contributorsList = res.body;
         console.log(this.contributorsList);
+        return res.body;
       },
       error: (err) => console.log(err),
     });
   }
 
   ngOnInit(): void {
+    this.listContributors();
+  }
+
+  ngOnChanges() {
     this.listContributors();
   }
 }

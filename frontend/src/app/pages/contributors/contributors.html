@@ -7,23 +7,14 @@
     </form>
     <button class="primary-btn" (click)="submit()">Salvar contribuinte</button>
   </div>
-  <div class="dtg">
-    <div class="dtg-header">
-      <span class="column-1">Nome</span>
-      <span class="column-2">Telefone</span>
-      <span class="column-3">Está ativo?</span>
-      <span><button (click)="listContributors()">Refresh</button></span>
-    </div>
-    <ul class="dtg-items">
-      @for (contributor of contributorsList; track contributor.id) {
-        <li class="dtg-item">
-          <div class="column-1">{{ contributor.name }}</div>
-          <div class="column-2">{{ contributor.phoneNumber }}</div>
-          <div class="column-3">{{ contributor.isActive }}</div>
-        </li>
-      } @empty {
-        <li class="dtg-item">No contributors found.</li>
-      }
-    </ul>
-  </div>
+  <app-data-grid-view
+    class="dtg-section"
+    columnOneName="Nome"
+    columnTwoName="Telefone"
+    columnThreeName="Está ativo?"
+    columnOneDataName="name"
+    columnTwoDataName="phoneNumber"
+    columnThreeDataName="isActive"
+    [dataResponse]="contributorsList"
+  ></app-data-grid-view>
 </main>
