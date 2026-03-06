@@ -1,0 +1,14 @@
+<div class="navbar">
+  <div class="logo-wrapper">
+    <img class="logo" src="logo_50px.png" alt="logo" />
+    <p class="logo-name">IEADP <span>Financeiro</span></p>
+  </div>
+  <ul class="nav-list" #navList>
+    <li><a href="/">Tela Inicial</a></li>
+    <li><a href="contributors">Contribuintes</a></li>
+    <li><a href="purposes">Propósitos</a></li>
+  </ul>
+  <button (click)="openMenu()" class="mobile-menu">
+    <img [src]="menuOpen ? 'close_24px.png' : 'menu_24px.png'" alt="Menu" />
+  </button>
+</div>

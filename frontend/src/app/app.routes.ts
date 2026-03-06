@@ -4,6 +4,7 @@ import { Register } from './pages/register/register';
 import { Home } from './pages/home/home';
 import { Contributors } from './pages/contributors/contributors';
 import { Purposes } from './pages/purposes/purposes';
+import { MainLayout } from './layout/main-layout/main-layout';
 
 export const routes: Routes = [
   {
@@ -16,14 +17,11 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: Home,
-  },
-  {
-    path: 'contributors',
-    component: Contributors,
-  },
-  {
-    path: 'purposes',
-    component: Purposes,
+    component: MainLayout,
+    children: [
+      { path: '', component: Home },
+      { path: 'contributors', component: Contributors },
+      { path: 'purposes', component: Purposes },
+    ],
   },
 ];
