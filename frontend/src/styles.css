@@ -55,3 +55,14 @@ body {
   color: var(--color-text);
   background: var(--color-background);
 }
+
+main {
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 0 8px;
+  }
+}
